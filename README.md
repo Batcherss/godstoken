@@ -6,6 +6,13 @@ This tool is for educational and research purposes only. The author is not respo
 A powerful tool for checking the validity of Discord tokens.  
 Supports single and batch checks, optional user info scraping, and debug logging.
 
+# 🚄Install like library
+You can install it like an library with added to ./bin
+
+```bash
+go install github.com/Batcherss/godstoken
+```
+
 ## ✨ Features
 
 - ✅ Check a single token with `-t`
