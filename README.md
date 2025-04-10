@@ -10,14 +10,19 @@ This tool is for educational and research purposes only. The author is not respo
 A powerful tool for checking the validity of Discord tokens.  
 Supports single and batch checks, optional user info scraping, and debug logging.
 
-# 🚄Install like library
+# How to install?
 You can install it like an library with added to ./bin
 
 ```bash
 go install github.com/Batcherss/godstoken
 ```
+And to validate download type in cmd
+```cmd
+godstoken
+```
+He will show info about arg's
 
-## ✨ Features
+##  Features
 
 - ✅ Check a single token with `-t`
 - 📁 Check a list of tokens from a file with `-f`
@@ -25,7 +30,7 @@ go install github.com/Batcherss/godstoken
 - 🐛 Enable debug logging to see each action step-by-step (`-debug`)
 - ⚠️ Automatic argument validation (prevents `-t` and `-f` being used together)
 
-## 📦 Usage
+##  Usage
 
 ```bash
 godstoken [arg]
@@ -53,7 +58,7 @@ godstoken -f="tokens.txt"
 godstoken -t="your_token_here" -d -debug
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 godstoken/
