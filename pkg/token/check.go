@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"github.com/batcherss/godstoken/pkg/util"
 )
 
@@ -45,6 +46,21 @@ func CheckToken(token string, debug bool, collectInfo bool) {
 
 	util.Debug(debug, "[+] Token valid:", token)
 	fmt.Printf("[+] Token \"%s\" is valid.\n", token)
+
+	file, err := os.OpenFile("active_tokens.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		util.Debug(debug, "[-] Failed to open file:", err)
+		fmt.Printf("[-] Failed to open active_tokens.txt.\n")
+		return
+	}
+	defer file.Close()
+
+	_, err = file.WriteString(token + "\n")
+	if err != nil {
+		util.Debug(debug, "[-] Failed to write to file:", err)
+		fmt.Printf("[-] Failed to write token to active_tokens.txt.\n")
+		return
+	}
 
 	if collectInfo {
 		body, _ := ioutil.ReadAll(resp.Body)
