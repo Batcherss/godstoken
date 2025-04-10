@@ -41,8 +41,6 @@ func main() {
 	gatherInfoPtr := flag.Bool("d", false, "Gather user info")
 	flag.Parse()
 
-	brainrootamobea()
-
 	if *tokenPtr != "" && *filePtr != "" {
 		fmt.Println("[-] Conflict: -t and -f cannot be used together.")
 		printHelp()
