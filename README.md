@@ -4,7 +4,7 @@ This tool is for educational and research purposes only. The author is not respo
 # godstoken
 
 [![Go](https://img.shields.io/badge/Go-1.22-blue.svg)](https://golang.org)  
-[![Platform](https://img.shields.io/badge/Platform-Windows%20-Linux-lightgrey)]()  
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%2F%20Linux-lightgrey)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()  
 [![Shellcode](https://img.shields.io/badge/Token-Checker-orange)]()
 A powerful tool for checking the validity of Discord tokens.  
